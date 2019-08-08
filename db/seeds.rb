@@ -12,65 +12,34 @@ Location.destroy_all
 HousingType.destroy_all
 User.destroy_all
 
+locations = [
+    {
+        "name" => "Space Called Tribe",
+        "phone" => "321-123-1234",
+        "address" => "456 elmo street Miami, FL",
+        "description" => "2 bedroom townhouses",
+        "units" => 15,
+        "zipcode" => "33113"
+    },
+    {
+        "name" => "Groovin Bean",
+        "phone" => "123-321-1234",
+        "address" => "123 elmo street Miami, FL",
+        "description" => "1 bedroom condos",
+        "units" => 22,
+        "zipcode" => "33132"
+    },
+    {
+        "name" => "Whitney Condo",
+        "phone" => "954-744-0000",
+        "address" => "1261 sw 103 ave Miami, FL",
+        "description" => "3 bedroom house",
+        "units" => 7,
+        "zipcode" => "33313"
+    }
+]
 
-# zipcodes = [
-#     {
-#         "name" => "33136"
-#         "location" => "937 NW 3rd Ave, Miami, FL 33136",
-#     },
-#     {
-#         "name"=> "33133",
-#         "location" => "801 NW 3rd Ave, Miami, Florida 33133",
-#     },
-# ]
-
-
-
-# zipcodes.each do |x|
-#     zipcode = zipcode.create(name: x["name"], genre:x["address"], phone: x["phone"], description: x["description"], units:x["units"])
-#     Location.find_or_create_by(address:address)
-    
-# end
-
-
-
-# [
-#     "rent",
-#     "buy"
-# ].each do |name|
-#     HousingType.find_or_create_by(name:name)
-# end
-
-# [
-#     "33136",
-#     "33133"
-# ].each do |name|
-#     Zipcode.find_or_create_by(name:name)
-# end
-
-# [
-#     "Student",
-#     "Senior",
-#     "Parent",
-#     "Veteran"
-# ].each do |name|
-#     User.find_or_create_by(name:name)
-# end
-
-
-# locations = [
-#     {
-#         "name" => "Space Called Tribe"
-#         "address" => "937 NW 3rd Ave, Miami, FL 33136",
-#     },
-#     {
-#         "name" => "Groovin Bean"
-#         "address" => "801 NW 3rd Ave, Miami, Florida 33133"
-#     }
-# ]
-
-
-# puts "#{Location.count} locations..."
-# puts "#{HousingType.count} housing_types..."
-# puts "#{Zipcode.count} zipcodes..."
-# puts "#{User.count} users..."
+locations.each do |x|
+    location = Location.create(name: x["name"], x["phone"], x["address"], x["drescription"], x["units"], x["zipcode"])
+    Zipcode.create(name: x["zipcode"], location_id: location:id)
+end
