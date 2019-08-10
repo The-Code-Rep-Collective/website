@@ -73,8 +73,8 @@ zipcodes = [
 zipcodes.each do |x|
     zipcode = Zipcode.create(name: x["name"])
     location = Location.create(name: x["name"], phone: x["phone"], address: x["address"], description: x["drescription"], units: x["units"], zipcode_id: x["zipcode:id"], user_id: x["user:id"], housing_type_id: x["housing_type:id"])
-    # housing_type = HousingType.create(name: x["housing_type"])
-    # user = User.create(name: x["user"])
+    housing_type = HousingType.create(name: x["housing_type"])
+    user = User.create(name: x["user"])
 end
 
-put "There are #{Location.count} afforable housing Location options available"
+puts "There are #{Location.count} afforable housing Location options available"
