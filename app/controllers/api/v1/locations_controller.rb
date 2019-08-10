@@ -13,9 +13,23 @@ module Api
                 location = Location.new(location_params)
             
                 if location.save
-                    render json: {status: 'SUCCESS', message: 'Saved location', data:location}, status: :ok
+                    render json: {status: 'SUCCESS', message: 'Saved Location', data:location}, status: :ok
                 else
                     render json: {status: 'ERROR', message: 'Location not saved', data:location.errors}, status: :unprocessable_entity
+            end
+
+            def destroy
+                location = Location.find(params[:id])
+                location.destroy
+                render json: {status: 'SUCCESS', message: 'Deleted lLcation', data:location}, status: :ok
+            end
+
+            def update
+                location = Location.find(params[:id])
+                if location.update_attributes(article_params)
+                    render json: {status: 'SUCCESS', message: 'Updated Location', data:location}, status: :ok
+                else
+                    render json: {status: 'ERROR', message: 'Location not updated', data:location.errors}, status: :unprocessable_entity
             end
 
             private
