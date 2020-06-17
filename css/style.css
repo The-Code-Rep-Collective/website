@@ -1,0 +1,218 @@
+/* Base */
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    line-height: 1.7;
+    color: #666666;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+::-moz-selection {
+    background: #000;
+    color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
+    font-family: "Arbutus Slab", serif;
+    color: #000;
+}
+
+.overlay.bg-light {
+    background-image: url("../images/black_panther.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: auto;
+    height: 600px;
+    background-color: #207561;
+    background-size: 1500px 800px;
+}
+
+
+/*Transparent Layer for background image*/
+
+.layer {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    width: 100%;
+    height: 600px;
+}
+
+.form-control {
+    height: 43px;
+    border-radius: 30px;
+    font-family: "Arbutus Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.form-control:active,
+.form-control:focus {
+    border-color: #207561;
+}
+
+.form-control:hover,
+.form-control:active,
+.form-control:focus {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.site-section {
+    padding: 2.5em 0;
+}
+
+@media (min-width: 768px) {
+    .site-section {
+        padding: 7em 0;
+    }
+}
+
+.site-section.site-section-sm {
+    padding: 4em 0;
+}
+
+.site-section-heading {
+    padding-bottom: 20px;
+    margin-bottom: 0px;
+    position: relative;
+    font-size: 2.5rem;
+}
+
+@media (min-width: 768px) {
+    .site-section-heading {
+        font-size: 3rem;
+    }
+}
+
+.site-footer {
+    padding: 4em 0;
+    background: #333333;
+}
+
+@media (min-width: 768px) {
+    .site-footer {
+        padding: 8em 0;
+    }
+}
+
+.site-footer .border-top {
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.site-footer p {
+    color: #737373;
+}
+
+.site-footer h2,
+.site-footer h3,
+.site-footer h4,
+.site-footer h5 {
+    color: #fff;
+}
+
+.site-footer a {
+    color: #999999;
+}
+
+.site-footer a:hover {
+    color: white;
+}
+
+.site-footer ul li {
+    margin-bottom: 10px;
+}
+
+.site-footer .footer-heading {
+    font-size: 16px;
+    color: #fff;
+}
+
+
+/* Blocks */
+
+.section-title {
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.section-title:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background: #207561;
+    width: 50px;
+}
+
+.section-title.text-center:after {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.section-title.text-center:after {
+    background: #fff;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.filters .btn {
+    border-color: transparent;
+    font-size: .8rem;
+    margin: 5px;
+    letter-spacing: .2rem;
+    background: rgba(52, 58, 64, 0.05);
+    color: #343a40;
+    padding: 5px 20px;
+    border-radius: 30px !important;
+    border: none !important;
+    text-transform: uppercase;
+}
+
+.form .form-control {
+    border: none;
+    border-radius: 0px;
+    border-bottom: 1px solid #eee;
+}
+
+.form .form-control:active,
+.form .form-control:focus {
+    border-color: #000;
+}
+
+.footer {
+    font-size: .9rem;
+}
+
+.footer .footer-title {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer a {
+    color: #343434;
+}
+
+.footer a:hover {
+    color: #000;
+}
